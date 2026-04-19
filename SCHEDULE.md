@@ -10,9 +10,9 @@
 |-----|--------|-------|---------|--------|
 | 16.4. | Feed | Kevät Flint -muistelmat | Kuvakoosteet kilpailuista, yksityiskohdat | ✅ Julkaistu |
 | 18.4. | Story | Divari-muistutus | "Sunnuntaina Divari klo 14:30! Anttilan koulu" | ✅ Julkaistu |
-| 19.4. | Story | Divari livenä | Tunnelmia kisan ajalta (klo 14:30–16:00) | ⏳ Tänään |
-| 19.4. | Feed | Divari ammuttu | Kuvakooste päivän kisasta (klo 19:00). **Karuselli, viim. slide = seuraa-CTA** | ⏳ Tänään illalla |
-| 20.4. | Feed | Simakisa-ennakko | Simakisa-mainos (WhatsApp-versio) + sisäkauden päätös -tunnelma | 📅 Suunniteltu |
+| 19.4. | Story | Divari livenä | Tunnelmia kisan ajalta (klo 14:30–16:00) | ✅ Julkaistu |
+| 19.4. | Feed | Divari ammuttu | Kuvakooste päivän kisasta (klo 19:00). | ✅ Julkaistu |
+| 20.4. | Feed | Simakisa-ennakko | Simakisa-mainos (WhatsApp-versio) + sisäkauden päätös -tunnelma  **Karuselli, viim. slide = seuraa-CTA** | 📅 Suunniteltu |
 | 25.4. | Story | Simakisa livenä | Tunnelmia paikan päältä. **Tallenna parhaat Reels-/karusellikäyttöä varten** | 📅 Suunniteltu |
 | ~26.4. | Feed | Kiitos sisäkausi! | Simakisan kuvat + kauden yhteenveto + siirtymä kesään. **Karuselli + CTA-slide** | 📅 Suunniteltu |
 | ~30.4. | Feed | Kesäkausi alkaa – maastorata & vappu | Maastoratakuvasarja karusellina + vappu-tervehdys tekstissä | 📅 Suunniteltu |
