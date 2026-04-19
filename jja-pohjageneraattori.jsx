@@ -275,6 +275,45 @@ function KaruselliCard({ slideNum, badgeText, title, desc, tagList, size = 540 }
   );
 }
 
+function CTACard({ headline, ctaText, subText, size = 540 }) {
+  const s = size / 540;
+  return (
+    <div style={{ width: size, height: size, position: "relative", overflow: "hidden", fontFamily: FONT.body, background: `linear-gradient(160deg, ${COLORS.bg1} 0%, ${COLORS.bg2} 60%, ${COLORS.bg1} 100%)` }}>
+      <TopBar />
+      {/* Decorative large arrow watermark */}
+      <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", fontSize: 280*s, opacity: 0.03, color: COLORS.accent, lineHeight: 1 }}>🏹</div>
+      {/* Subtle radial glow */}
+      <div style={{ position: "absolute", inset: 0, background: `radial-gradient(circle at 50% 50%, ${COLORS.accent}08 0%, transparent 70%)` }} />
+      <div style={{ position: "relative", padding: `${40*s}px ${50*s}px`, height: "100%", boxSizing: "border-box", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+        {/* Headline */}
+        <p style={{ color: COLORS.text, fontSize: 18*s, lineHeight: 1.6, margin: `0 0 ${32*s}px 0`, maxWidth: 400*s, opacity: 0.85 }}>
+          {headline}
+        </p>
+        {/* CTA button-like element */}
+        <div style={{
+          background: COLORS.accent,
+          borderRadius: 6*s,
+          padding: `${14*s}px ${40*s}px`,
+          marginBottom: 20*s,
+        }}>
+          <span style={{ fontFamily: FONT.display, fontSize: 22*s, fontWeight: 700, color: COLORS.bg1, textTransform: "uppercase", letterSpacing: 2 }}>
+            {ctaText}
+          </span>
+        </div>
+        {/* Sub text */}
+        <p style={{ color: COLORS.textMuted, fontSize: 13*s, margin: 0, maxWidth: 350*s, lineHeight: 1.5 }}>
+          {subText}
+        </p>
+        {/* Footer */}
+        <div style={{ position: "absolute", bottom: 24*s, left: 50*s, right: 50*s, borderTop: `1px solid ${COLORS.accent}33`, paddingTop: 10*s, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <img src={LOGO_SRC} alt="JJA" style={{ width: 22*s, height: 22*s, borderRadius: "50%" }} />
+          <span style={{ color: COLORS.accent, fontSize: 10*s, letterSpacing: 1 }}>#jja1975</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── FULLSCREEN OVERLAY ───
 function FullscreenOverlay({ children, onClose, label }) {
   return (
@@ -468,6 +507,38 @@ function KaruselliEditor() {
   );
 }
 
+function CTAEditor() {
+  const [fs, setFs] = useState(false);
+  const [headline, setHeadline] = useState("Haluatko nähdä lisää kuvia kauden varrelta?");
+  const [ctaText, setCtaText] = useState("Seuraa @jja.1975");
+  const [subText, setSubText] = useState("Kilpailuja, tekniikkavinkkejä ja tunnelmia radalta. Tule mukaan!");
+  const props = { headline, ctaText, subText };
+  return (
+    <>
+      {fs && <FullscreenOverlay onClose={() => setFs(false)} label="1080×1080"><CTACard {...props} size={1080} /></FullscreenOverlay>}
+      <div style={{ display: "flex", gap: 24, flexWrap: "wrap", justifyContent: "center" }}>
+        <div style={{ width: 280 }}>
+          <h3 style={{ color: COLORS.accent, fontFamily: FONT.display, fontSize: 16, margin: "0 0 12px", letterSpacing: 1 }}>MUOKKAA</h3>
+          <Field label="Yläotsikko" value={headline} onChange={setHeadline} multiline />
+          <Field label="CTA-painikkeen teksti" value={ctaText} onChange={setCtaText} />
+          <Field label="Alateksti" value={subText} onChange={setSubText} multiline />
+          <PreviewButton onClick={() => setFs(true)} />
+          <div style={{ marginTop: 12, padding: "10px 12px", background: "#151515", borderRadius: 6, border: "1px solid #252525" }}>
+            <p style={{ color: COLORS.textMuted, fontSize: 10, margin: 0, lineHeight: 1.5 }}>
+              💡 Esimerkkejä CTA-teksteiksi:<br />
+              • "Seuraa @jja.1975"<br />
+              • "Linkki biossa"<br />
+              • "Tule kokeilemaan!"<br />
+              • "Ilmoittaudu nyt"
+            </p>
+          </div>
+        </div>
+        <div><CTACard {...props} /></div>
+      </div>
+    </>
+  );
+}
+
 // ═══════════ MAIN ═══════════
 export default function Pohjageneraattori() {
   const [active, setActive] = useState(0);
@@ -478,6 +549,7 @@ export default function Pohjageneraattori() {
     { name: "Tekniikkavinkki", component: <TekniikkaEditor /> },
     { name: "Story", component: <StoryEditor /> },
     { name: "Karuselli", component: <KaruselliEditor /> },
+    { name: "CTA-slide", component: <CTAEditor /> },
   ];
   return (
     <>
