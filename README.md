@@ -2,7 +2,7 @@
 
 Järvenpään Jousiampujien epävirallisen Instagram-tilin [@jja.1975](https://www.instagram.com/jja.1975/) sisällöntuotannon ylläpito ja suunnittelu.
 
-> Tämä repo on viestintätiimin yhteinen työtila. Täältä löytyvät julkaisuaikataulu ja Reels-käsikirjoitukset. Strategia ja brändiohjeet elävät erillisessä Claude-projektissa.
+> Tämä repo on viestintätiimin yhteinen työtila. Täältä löytyvät julkaisuaikataulu, sisältösuunnitelmat, Reels-käsikirjoitukset, Q&A-sisällöt ja brändiohjeet.
 
 ---
 
@@ -12,9 +12,9 @@ Järvenpään Jousiampujien epävirallisen Instagram-tilin [@jja.1975](https://w
 |----------|---------------|
 | **[SCHEDULE.md](SCHEDULE.md)** | Päivittäinen julkaisuaikataulu — mitä on julkaistu, mitä tulee seuraavaksi, sisältöideat |
 | **[REELS.md](REELS.md)** | Reels-videoiden käsikirjoitukset ja tuotantostatukset |
+| **[QA.md](QA.md)** | Q&A-kysymykset ja vastaukset — Storyihin ja Highlighteihin tuleva sisältö |
+| **[viestintasuunnitelma.md](viestintasuunnitelma.md)** | Strategia, kohderyhmä, brändi-ilme, värit, fontit, tavoitteet |
 | **[CONTRIBUTING.md](CONTRIBUTING.md)** | Ohjeet tiimille: miten päivitetään tiedostoja, mitä statuksia käytetään, julkaisurutiini |
-
-**Viestintäsuunnitelma, brändiohjeet ja strategia** eivät ole tässä repossa — ne elävät Claude-projektin keskusteluissa ja brändipaketin yhteydessä. Jos tarvitset niitä, kysy repon ylläpitäjältä.
 
 ---
 
@@ -56,6 +56,8 @@ Et tarvitse git-taitoja. Kaikki onnistuu selaimessa.
 - Story / Reels: 1080 × 1920 px
 
 **Hashtag joka postaukseen:** `#jja1975`
+
+Tarkemmat ohjeet löytyvät [viestintasuunnitelma.md](viestintasuunnitelma.md)-tiedostosta.
 
 ---
 
